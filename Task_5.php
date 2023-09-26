@@ -10,8 +10,11 @@
 
 
    function generatePassword($length){
-      
+      $text = 'abcdefghijklmnopqrstuvwxyzABCDEFGQRSTUVWXYZ0123456789!@#$%^&*()_+';
+       $randomString = substr(str_shuffle($text), 0, $length);
+       return $randomString;
    }
+   echo  generatePassword(12);
 
 
 
